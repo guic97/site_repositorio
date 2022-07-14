@@ -9,6 +9,11 @@
     --color4: rgb(251, 255, 241);
     --color5: rgb(244, 227, 178);
     --title: 25px;
+    --barPercent1:100%;
+    --barPercent2:80%;
+    --barPercent3:60%;
+    --barPercent4:40%;
+    --barPercent5:20%;
   }
 *{
     box-sizing: border-box;
@@ -31,7 +36,6 @@ nav{
 section{
     width: 100%;
     height: 100%;
-    margin: 0 auto;
     min-width: 300px;
 }
 ul{
@@ -97,8 +101,14 @@ footer div ul{
     font-size: var(--title);
     border-left: 5px solid var(--color3);
     padding-left: 10px;
-}
+    margin-top: 30px;
 
+}
+.subTitle{
+    border-bottom: 4px solid var(--color2);
+    padding-bottom: 5px;
+    margin: 100px 0;
+}
 .banner{
     min-width: 100px;
     max-width: 100%;
@@ -109,7 +119,6 @@ footer div ul{
     box-shadow: inset 3px 3px 10px var(--color1);
     height: 550px;
 }
-
 .bannerTitle{
     text-shadow: 1px 1px 1px var(--color1);
     padding: 15px;
@@ -130,14 +139,15 @@ footer div ul{
     max-height: 400px;
     max-width: 300px;
 }
-.aboutMeSection{
-    padding-top: 30px;
+.aboutMeSection, .knowledgesSection{
+    padding: 50px 20px;
     max-width: 1150px;
     margin: auto;
     color: var(--color1);
+    border-bottom: 1px solid var(--color1);
 }
 .aboutMe{
-    margin: 30px 0;
+    margin: 50px 0;
     display: flex;
     flex-direction: row;
 }
@@ -148,6 +158,9 @@ footer div ul{
 .aboutMeText p{
     color: var(--color2);
     text-decoration: none;
+}
+.aboutMeInfo{
+    margin-top: 30px;
 }
 .aboutMeInfo div{
     display: flex;
@@ -163,5 +176,57 @@ footer div ul{
     text-decoration: none;
     color: var(--color2);
 }
-
-
+.knowledMe{
+    margin-top: 50px;
+}
+.knowledMe div{
+    margin: 15px 0;
+}
+.knowledMe h4{
+    padding-left: 5px;
+    border-left: 3px solid var(--color2);
+}
+.progressBarContainer{
+    height: 7px;
+    background-color: var(--color5);
+    max-width: 500px;
+}
+.progressBarContainer .progressBar{
+    height: 100%;
+    background-color: var(--color3);
+}
+.progress1{
+    animation: prog1 3s infinite;
+}
+@keyframes prog1{
+    0%{width:0%;}
+    100%{width: var(--barPercent1);}
+}
+.progress2{
+    animation: prog2 3s infinite;
+}
+@keyframes prog2{
+    0%{width:0%;}
+    100%{width: var(--barPercent2);}
+}
+.progress3{
+    animation: prog3 3s infinite;
+}
+@keyframes prog3{
+    0%{width:0%;}
+    100%{width: var(--barPercent3);}
+}
+.progress4{
+    animation: prog4 3s infinite;
+}
+@keyframes prog4{
+    0%{width:0%;}
+    100%{width: var(--barPercent4);}
+}
+.progress5{
+    animation: prog5 3s infinite;
+}
+@keyframes prog5{
+    0%{width:0%;}
+    100%{width: var(--barPercent5);}
+}
