@@ -8,17 +8,28 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <main class="flexContainerColumn">
-      <nav class="flexContainerRow">
-        <span>
-          hamburguer
-        </span>
-        <span>
-          <h1>Atila Guilherme</h1>
-        </span>
-        <span>
-          horas
-        </span>
+    <main id="mainId" class="flexContainerColumn">
+      <nav id="nav" class="flexContainerRow spaceBetween">
+        <div id='menuId' class="menu alignCenter justifyCenter">
+          <span></span>
+        </div>
+        <div id="menuOptions" class="flexContainerRow alignTextRight">
+          <li><a href="#mainId">Inicio</a></li>
+          <li><a href="#aboutMeSectionId">Sobre mim</a></li>
+          <li><a href="#knowledgesSectionId">Conhecimentos</a></li>
+          <li><a href="">Pensamentos</a></li>
+          <li><a href="#footerId">Contato</a></li>
+        </div>
+        <div class="navNoHiddenH1">
+          <h1>
+            Atila Guilherme C.
+          </h1>
+        </div>
+        <div class="navHiddenH1">
+          <h1>
+            Atila C.
+          </h1>
+        </div>
       </nav>
 
       <section>
@@ -35,7 +46,7 @@
             </h1>
           </div>
         </div>
-        <div class="aboutMeSection">
+        <div id="aboutMeSectionId" class="aboutMeSection">
           <div class="title">
             <h1>Sobre mim</h1>
           </div>
@@ -75,7 +86,7 @@
             </div>   
           </div>
         </div>
-        <div class="knowledgesSection">
+        <div id="knowledgesSectionId" class="knowledgesSection">
           <div class="title">
             <h1>Conhecimentos profissionais</h1>
           </div>
@@ -169,7 +180,7 @@
           <div>&copy; Portifólio de Atila</div>
         </div>
       </footer>
-      <footer class="mainFooter flexContainerRow alignCenter">
+      <footer id="footerId" class="mainFooter flexContainerRow alignCenter">
           <div>
             <span>
               Redes sociais:
