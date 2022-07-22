@@ -9,11 +9,11 @@
     --color4: rgb(251, 255, 241);
     --color5: rgb(244, 227, 178);
     --title: 25px;
-    --barPercent1: 100%;
-    --barPercent2: 80%;
-    --barPercent3: 60%;
-    --barPercent4: 40%;
-    --barPercent5: 20%;
+    --barPercent1:100%;
+    --barPercent2:80%;
+    --barPercent3:60%;
+    --barPercent4:40%;
+    --barPercent5:20%;
   }
 *{
     box-sizing: border-box;
@@ -39,10 +39,14 @@ nav{
 nav div > li{
     margin: 0 10px;
     transition: .5s;
+    font-weight: bold;
+    text-transform: uppercase;
+     display: flex;
+    align-items: center;
 }
 a{
     text-decoration: none;
-    color:var(--color5);
+    color:var(--color4);
 }
 .menu{
     height: 20px;
@@ -58,6 +62,9 @@ a{
     height: 2px;
     width: 100%;
     background-color: var(--color4);  
+}
+#nav.active div > li{
+    padding: 10px 0;
 }
 section{
     margin-top: 80px;
@@ -130,7 +137,8 @@ footer div ul{
     font-size: var(--title);
     border-left: 5px solid var(--color3);
     padding-left: 10px;
-    margin-top: 30px;
+    margin-top: 50px;
+
 }
 .subTitle{
     border-bottom: 4px solid var(--color2);
@@ -138,7 +146,7 @@ footer div ul{
     margin: 100px 0;
 }
 .banner{
-    min-width: 300px;
+    min-width: 100px;
     max-width: 100%;
     background: url("./images/banner.jpg");
     background-position: center center;
@@ -167,7 +175,10 @@ footer div ul{
     max-height: 400px;
     max-width: 300px;
 }
-.aboutMeSection, .knowledgesSection{
+.aboutMeSection, 
+.knowledgesSection, 
+.thoughtSection,
+.continue{
     padding: 50px 20px;
     max-width: 1150px;
     margin: auto;
@@ -193,6 +204,7 @@ footer div ul{
 .aboutMeInfo div{
     display: flex;
     flex-direction: row;
+    max-width: 500px;
     border-bottom: 2px solid var(--color3);
     padding: 5px;
 }
@@ -212,6 +224,21 @@ footer div ul{
 .knowledMe h4{
     padding-left: 5px;
     border-left: 3px solid var(--color2);
+}
+.thoughts{
+    margin-top: 100px;
+    background-color: var(--color5);
+    box-shadow: inset 1px 1px 12px var(--color1);
+    padding: 15px 0;
+    border-radius: 25px;
+    
+}
+.thoughts div{
+    width: 95%;
+    max-width: 800px;
+    color: var(--color1);
+    margin: 30px 0;
+    padding: 0 10px;
 }
 
 /* Keyframes bars configs */
@@ -262,6 +289,7 @@ footer div ul{
 }
 
 /* Media query spot */
+
 .menu, .footerResponsive, .navHiddenH1{
     display: none;
 }
@@ -282,7 +310,9 @@ footer div ul{
     .navNoHiddenH1{
         display: none;
     }
-
+    .thoughts div > h1{
+        font-size: 22px;
+    }
 }
 @media screen and (max-width:720px) {
     .aboutMe{
@@ -309,24 +339,17 @@ footer div ul{
     .bannerText h1{
         font-size: 20px;
     }
-    .footerResponsive{
-        display: block;
-    }
-    .hideFooter{
-        display: none;
-    }
     .menu{
         display: flex;
     }
-    #nav.active #menuOptions{
+    .navHiddenH1, .hideFooter{
+        display: none;
+    }
+    #nav.active #menuOptions, .navNoHiddenH1, .footerResponsive {
         display: block;
-        
     }
     #nav.active #menuId{
         filter: brightness(50%);
-    }
-    #nav.active div > li{
-        padding: 10px 0;
     }
     #menuOptions{
         display: none;
@@ -337,6 +360,12 @@ footer div ul{
         background-color: var(--color1);
         text-align: left;
         padding: 10px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .thoughts div > h1{
+        font-size: 20px;
     }
     .mainFooter{
         padding: 0 20px 20px 20px;
