@@ -41,7 +41,7 @@ nav div > li{
     transition: .5s;
     font-weight: bold;
     text-transform: uppercase;
-     display: flex;
+    display: flex;
     align-items: center;
 }
 a{
@@ -183,7 +183,7 @@ footer div ul{
     border-bottom: 1px solid var(--color1);
 }
 .aboutMe{
-    margin: 50px 0;
+    margin: 50px 0 0 0;
     display: flex;
     flex-direction: row;
 }
@@ -212,15 +212,34 @@ footer div ul{
     text-decoration: none;
     color: var(--color2);
 }
+.whoIm{
+    padding: 10px;
+    margin: 50px 0;
+    max-width: 700px;
+    background-color: var(--color4);
+}
+.whoIm p{
+    margin-top: 20px;
+    line-height: 25px;
+}
+.aboutMe p span, .whoIm p span{
+    font-weight: bold;
+    color: var(--color4);
+    background-color: var(--color2);
+    padding: 3px 6px;
+}
 .knowledMe{
     margin-top: 50px;
 }
 .knowledMe div{
     margin: 15px 0;
+    
 }
 .knowledMe h4{
-    padding-left: 5px;
+    padding: 5px;
     border-left: 3px solid var(--color2);
+    background-color: rgb(255, 255, 255);
+    width: 50%;
 }
 .progressDiv{
     display: none;
@@ -239,7 +258,11 @@ footer div ul{
     box-shadow: inset 1px 1px 12px var(--color1);
     padding: 15px 0;
     border-radius: 25px;
-    
+    background: url(./images/programImage.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 3px 3px 10px var(--color1);
 }
 .thoughts div{
     width: 95%;
@@ -247,8 +270,33 @@ footer div ul{
     color: var(--color1);
     margin: 30px 0;
     padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.61);
+    border-radius: 10px 2px;
 }
-
+.expContainer{
+   margin: 100px auto 0 auto; 
+   max-width: 600px;
+   border: 1px solid var(--color1);
+   padding: 10px;
+   border-radius: 10px;
+}
+.expContainer div{
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.expContainerTitle{
+    background-color: var(--color5);
+    padding: 5px;
+}
+.expContainer p, .expContainer li{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.workAt li{
+    margin-top: 10px;
+}
 /* Keyframes bars configs */
 
 .progressBarContainer{
