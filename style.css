@@ -145,7 +145,7 @@ footer div ul{
 .banner{
     min-width: 100px;
     max-width: 100%;
-    background: url("./images/banner.jpg");
+    background: url("./images/banners/banner.jpg");
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -255,7 +255,6 @@ footer div ul{
 }
 .knowledMe div{
     margin: 15px 0;
-    
 }
 .knowledMe h4{
     padding: 5px;
@@ -301,21 +300,25 @@ footer div ul{
 .projects{
     margin-top: 100px;
 }
+
 .projects div{
-    margin: 10px;
-    min-width: 400px;
-    min-height: 300px;
-    border: 2px solid #000;
-
-
-    /* To change */
+    margin: 20px auto;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-size: 30px;
     font-weight: bold;
+    background-color: var(--color1);
+    color: var(--color5);
 }
-
+.projects div h4{
+    padding: 5px;
+}
+.projects div a > img{
+    max-width: 600px;
+}
 
 /* Keyframes bars configs */
 .progressBarContainer{
@@ -443,4 +446,8 @@ footer div ul{
     .mainFooter{
         padding: 0 20px 20px 20px;
     }
+    .projects div a > img{
+        width: 100%;
+    }
+    
 }
